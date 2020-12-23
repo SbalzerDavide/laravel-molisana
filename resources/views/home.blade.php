@@ -8,6 +8,7 @@
             <div class="card">
                 <h4>{{ $card['titolo'] }}</h4>
                 <img src="{{ $card['src'] }}" alt="">
+                <a href="{{ route('product', $card['id']) }}">Dettagli prodotto</a>
             </div>
         @endforeach
     </div>
@@ -18,6 +19,7 @@
             <div class="card">
                 <h4>{{ $card['titolo'] }}</h4>
                 <img src="{{ $card['src'] }}" alt="">
+                <a href="{{ route('product', $card['id']) }}">Dettagli prodotto</a>
             </div>
         @endforeach
     </div>
@@ -28,6 +30,7 @@
             <div class="card">
                 <h4>{{ $card['titolo'] }}</h4>
                 <img src="{{ $card['src'] }}" alt="">
+                <a href="{{ route('product', $card['id']) }}">Dettagli prodotto</a>
             </div>
         @endforeach
     </div>
