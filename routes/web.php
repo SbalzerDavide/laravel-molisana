@@ -36,7 +36,8 @@ Route::get('/', function () {
     };
 
 
-    return view('home', ['lunghe' => $lunghe, 'corte' => $corte, 'cortissime' => $cortissime]);
+    // return view('home', ['lunghe' => $lunghe, 'corte' => $corte, 'cortissime' => $cortissime]);
+    return view('home', compact('lunghe','corte', 'cortissime'));
 });
 
 Route::get('/product/{id}', function ($id) {
@@ -44,7 +45,7 @@ Route::get('/product/{id}', function ($id) {
     $data = config('app-data');
 
     $product = $data[$id];
-    return view('product',['product' => $product]);
+    return view('product',compact('product'));
 })->name('product');
 
 

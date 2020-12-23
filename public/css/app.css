@@ -39,6 +39,15 @@ main .cards .card h4 {
   font-weight: 400;
   margin-bottom: 10px;
 }
+main .product {
+  text-align: center;
+}
+main .product h1 {
+  margin-bottom: 20px;
+}
+main .product img {
+  display: block;
+}
 
 footer {
   padding: 20px 0;
