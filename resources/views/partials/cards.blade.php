@@ -1,13 +1,15 @@
 @if (! empty($cards))
-    <h2>{{ $title }}</h2>
-
-    <div class="cards">
-        @foreach ($cards as $card)
-            <div class="card">
-                <h4>{{ $card['titolo'] }}</h4>
-                <img src="{{ $card['src'] }}" alt="">
-                <a href="{{ route('product', $card['id']) }}">Dettagli prodotto</a>
+        <div class="container">
+            <h2>{{ $title }}</h2>
+        
+            <div class="cards">
+                @foreach ($cards as $card)
+                    <div class="card">
+                        <a href="{{ route('product', $card['id']) }}">                            
+                            <img src="{{ $card['src'] }}" alt="">
+                        </a>
+                    </div>
+                @endforeach
             </div>
-        @endforeach
-    </div>
+        </div>
 @endif

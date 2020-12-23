@@ -1,4 +1,14 @@
 main{
+    .all-products{
+        padding: 20px 0;
+        background-image: url('../image/fondo-pag-speciali.jpg');
+        background-size: cover;
+    }
+    h2{
+        margin-left: 1%;
+        font-size: 30px;
+        font-weight: 500;
+    }
     .cards{
         display: flex;
         flex-wrap: wrap;
@@ -12,14 +22,5 @@ main{
             }
         }
         
-    }
-    .product{
-        text-align: center;
-        h1{
-            margin-bottom: 20px;
-        }
-        img{
-            display: block;
-        }
     }
 }

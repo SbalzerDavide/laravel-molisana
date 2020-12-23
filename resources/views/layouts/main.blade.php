@@ -7,7 +7,8 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
         <!-- styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -17,7 +18,7 @@
 
         @include('partials.header')
 
-        <main class="container">
+        <main>
             @yield('content')
         </main>
 

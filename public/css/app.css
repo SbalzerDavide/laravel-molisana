@@ -6,11 +6,28 @@
 
 body {
   font-family: sans-serif;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+
+h2 {
+  color: #002d73;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus {
+  outline: none;
 }
 
 img {
@@ -26,6 +43,16 @@ header .logo {
   margin: 0 auto;
 }
 
+main .all-products {
+  padding: 20px 0;
+  background-image: url("../image/fondo-pag-speciali.jpg");
+  background-size: cover;
+}
+main h2 {
+  margin-left: 1%;
+  font-size: 30px;
+  font-weight: 500;
+}
 main .cards {
   display: flex;
   flex-wrap: wrap;
@@ -39,14 +66,23 @@ main .cards .card h4 {
   font-weight: 400;
   margin-bottom: 10px;
 }
-main .product {
+
+.product {
+  background-color: #b7dae5;
+  color: #002d73;
+}
+.product h1 {
   text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  padding: 30px 0;
 }
-main .product h1 {
-  margin-bottom: 20px;
-}
-main .product img {
+.product img {
   display: block;
+}
+.product p {
+  line-height: 1.9rem;
+  padding: 30px 0;
 }
 
 footer {

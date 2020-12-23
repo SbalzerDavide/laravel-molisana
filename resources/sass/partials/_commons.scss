@@ -6,11 +6,28 @@
 
 body{
     font-family: sans-serif;
+    font-size: $base-size;
+    font-family: $primary-font;
 }
 
 .container{
     width: 1200px;
     margin: 0 auto;
+}
+
+h2{
+    color: $primary-text;
+}
+
+a{
+    text-decoration: none;
+    color: $black;
+    &:hover{
+        text-decoration: underline;
+    }
+    &:focus{
+        outline: none;
+    }
 }
 
 img{
