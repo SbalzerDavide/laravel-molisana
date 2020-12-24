@@ -5,13 +5,12 @@
 }
 
 body {
-  font-family: sans-serif;
   font-size: 24px;
   font-family: "Roboto", sans-serif;
 }
 
 .container {
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
 }
 
@@ -67,6 +66,33 @@ main .cards .card h4 {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 90vw;
+  }
+
+  main .cards .card {
+    flex-basis: 48%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 576px) {
+  .all-products {
+    padding: 20px;
+  }
+
+  main .cards {
+    justify-content: center;
+  }
+  main .cards .card {
+    flex-basis: 98%;
+    margin: 20px 0;
+  }
+}
 .product {
   background-color: #b7dae5;
   color: #002d73;
