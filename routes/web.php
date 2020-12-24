@@ -36,9 +36,8 @@ Route::get('/', function () {
     };
 
 
-    // return view('home', ['lunghe' => $lunghe, 'corte' => $corte, 'cortissime' => $cortissime]);
     return view('home', compact('lunghe','corte', 'cortissime'));
-});
+})->name('home');
 
 Route::get('/product/{id}', function ($id) {
 
@@ -51,4 +50,4 @@ Route::get('/product/{id}', function ($id) {
 
 Route::get('/news', function () {
     return view('news');
-});
+})->name('news');

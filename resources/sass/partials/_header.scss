@@ -1,7 +1,40 @@
 header{
-    padding: 20px 0;
+    padding-top: 20px;
     .logo{
         width: 200px;
         margin: 0 auto;
+    }
+    nav{
+        width: 400px;
+        margin: 0 auto;
+        ul{
+            margin-left: 0;
+            display: flex;
+            align-items: center;
+            li{
+                text-align: center;
+                flex-basis: calc(100%/3);
+                line-height: 4rem;
+                &:hover{
+                    background-color: $color-hover;
+                }
+                a{
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:576px){
+    header{
+        nav{
+            width: 300px;
+        }
+
     }
 }
