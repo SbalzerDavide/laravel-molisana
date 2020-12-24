@@ -16,4 +16,9 @@ mix.js('resources/js/app.js', 'public/js')
     .options({
         processCssUrls: false, 
     })
-    mix.disableNotifications();
+    mix.disableNotifications()
+    .browserSync({        
+        proxy: 'http://127.0.0.1:8000',        
+        watch: true,        
+        files: ['./**/*.css', './**/*.js', './**/*.+(html|php)'],    
+});

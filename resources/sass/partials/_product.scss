@@ -10,9 +10,26 @@
     img{
         display: block;
     }
-    p{
+    .descriprion{
         line-height: 1.9rem;
         padding: 30px 0;
     }
     
+}
+
+//media query
+@media screen and (max-width:1100px){
+}
+
+@media screen and (max-width:768px){
+}
+
+@media screen and (max-width:576px){
+    .product{
+        .description{
+            line-height: 1.7rem;
+            font-size: $text-mobile;
+            padding: 25px;
+        }
+    }
 }
