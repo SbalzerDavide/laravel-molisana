@@ -60,31 +60,44 @@ header nav {
   width: 400px;
   margin: 0 auto;
 }
-header nav ul {
+header nav .list {
   margin-left: 0;
   display: flex;
   align-items: center;
 }
-header nav ul li {
+header nav .list li {
   text-align: center;
   flex-basis: calc(100%/3);
   line-height: 4rem;
 }
-header nav ul li:hover {
+header nav .list li:hover {
   background-color: #b2e5fc;
 }
-header nav ul li a {
+header nav .list li a {
   display: inline-block;
   height: 100%;
   width: 100%;
 }
-header nav ul li a:hover {
+header nav .list li a:hover {
   text-decoration: none;
+}
+header nav .mobile-nav {
+  display: none;
+  text-align: center;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 576px) {
   header nav {
     width: 300px;
+  }
+  header nav .list {
+    display: none;
+  }
+  header nav .mobile-nav {
+    display: inline-block;
+    width: 100%;
+    line-height: 4rem;
   }
 }
 main .all-products {

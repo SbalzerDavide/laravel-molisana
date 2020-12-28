@@ -13,15 +13,22 @@
         <!-- styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+        
+        
     </head> 
     <body>
+        <div id="app">
+            @include('partials.header')
+            
+            <main>
+                @yield('content')
+            </main>
+            
+            @include('partials.footer')
 
-        @include('partials.header')
+        </div>
 
-        <main>
-            @yield('content')
-        </main>
-
-        @include('partials.footer')
+        <!-- script -->
+        <script src="{{ asset('js/app.js')}}"></script>
     </body>
 </html>
