@@ -42,9 +42,10 @@ Route::get('/', function () {
 Route::get('/product/{id}', function ($id) {
 
     $data = config('app-data');
+    $length = count($data) -1;
 
     $product = $data[$id];
-    return view('product',compact('product'));
+    return view('product',compact('product','id','length'));
 })->name('product');
 
 

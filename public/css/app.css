@@ -46,6 +46,7 @@ img {
 @media screen and (max-width: 768px) {
   .container {
     width: 100vw;
+    padding: 0 35px;
   }
 }
 header {
@@ -117,6 +118,7 @@ main .card {
   }
 }
 .product {
+  position: relative;
   background-color: #b7dae5;
   color: #002d73;
 }
@@ -129,57 +131,85 @@ main .card {
 .product img {
   display: block;
 }
-.product .descriprion {
+.product .description {
   line-height: 1.9rem;
-  padding: 30px;
+  padding-bottom: 30px;
 }
-.product .descriprion ol {
+.product .description ol {
   margin-left: 50px;
+}
+.product .arrow-left,
+.product .arrow-right {
+  position: absolute;
+  top: 50%;
+  padding: 20px;
+  border-radius: 5px;
+}
+.product .arrow-left:hover,
+.product .arrow-right:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.product .arrow-left a,
+.product .arrow-right a {
+  color: #fff;
+  font-size: 50px;
+}
+.product .arrow-left a:hover,
+.product .arrow-right a:hover {
+  text-decoration: none;
+}
+.product .arrow-left {
+  left: 0;
+}
+.product .arrow-right {
+  right: 0;
 }
 
 @media screen and (max-width: 576px) {
   .product .description {
-    line-height: 1.7rem;
-    font-size: 20px;
-    padding: 25px;
+    padding: 20px 0;
+  }
+  .product .arrow-left,
+.product .arrow-right {
+    padding: 5px;
   }
 }
 footer {
   margin-top: 50px;
 }
-footer .container {
+footer .footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 20px 10px;
+  padding: 20px 0;
   color: #848d9b;
 }
-footer .container .contacts-text {
+footer .footer .contacts-text {
   margin-bottom: 30px;
 }
-footer .container .col {
+footer .footer .col {
   padding-right: 20px;
   font-size: 18px;
   flex-basis: calc(100%/3);
 }
-footer .container .col h3 {
+footer .footer .col h3 {
   font-weight: 500;
 }
-footer .container .col ul {
+footer .footer .col ul {
   margin-bottom: 30px;
 }
-footer .container .col a {
+footer .footer .col a {
   color: #848d9b;
   line-height: 2rem;
 }
 
 @media screen and (max-width: 1100px) {
-  footer .container .col {
+  footer .footer .col {
     flex-basis: 70%;
   }
 }
 @media screen and (max-width: 576px) {
-  footer .container .col {
+  footer .footer .col {
     flex-basis: 100%;
     font-size: 24px;
   }

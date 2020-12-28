@@ -1,10 +1,10 @@
 footer{
     margin-top: 50px;
-    .container{
+    .footer{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 20px 10px;
+        padding: 20px 0;
         color: $color-footer;
         .contacts-text{
             margin-bottom: 30px;
@@ -23,29 +23,26 @@ footer{
                 color: $color-footer;
                 line-height: 2rem;
             }
-
         }
     }
 }
 @media screen and (max-width:1100px){
     footer{
-        .container{
+        .footer{
             .col{
                 flex-basis: 70%;
             }
         }
-
     }
 }
 
 @media screen and (max-width:576px){
     footer{
-        .container{
+        .footer{
             .col{
                 flex-basis: 100%;
                 font-size: $base-size;
             }
         }
-
     }
 }

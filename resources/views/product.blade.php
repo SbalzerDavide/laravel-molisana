@@ -6,9 +6,20 @@
             <h1>{{ $product['titolo'] }}</h1>    
             <img src="{{ $product['src-h'] }}" alt="{{ $product['titolo'] }}">
             <img src="{{ $product['src-p'] }}" alt="{{ $product['titolo'] }}">
-            <div class="descriprion">
+            <div class="description">
                 <p>{!! $product['descrizione'] !!}</p>
             </div>
+            @if ($id > 0)
+                <div class="arrow-left">
+                    <a href="{{ route('product', $id - 1 ) }}"><</a>
+                    
+                </div>
+            @endif
+            @if ($id < $length)
+                <div class="arrow-right">
+                    <a href="{{ route('product', $id + 1 ) }}">></a>
+                </div>
+            @endif
         </div>
     </section>
 @endsection
