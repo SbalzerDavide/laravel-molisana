@@ -16,12 +16,16 @@
         </ul>
         <div class="mobile-nav">
             <div 
-            class="hamburger" 
+            class="hamburger"
+            :class="showMenu ? 'left' : ''" 
             @click="showMenu = !showMenu"
             >
-                @{{ saluto }}
+                <i class="fas fa-bars" v-if="!showMenu"></i>
+                <i class="fas fa-arrow-up" v-if="showMenu"></i>
             </div>
-            <div class="menu-mobile" v-if="showMenu">
+            <div class="menu-mobile"
+            v-if="showMenu" 
+            >
                 <ul class="mobile-list">
                     <li>
                         <a href="{{ route('home') }}">Home</a>

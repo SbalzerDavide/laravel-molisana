@@ -11,13 +11,17 @@
             </div>
             @if ($id > 0)
                 <div class="arrow-left">
-                    <a href="{{ route('product', $id - 1 ) }}"><</a>
+                    <a href="{{ route('product', $id - 1 ) }}">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
                     
                 </div>
             @endif
             @if ($id < $length)
                 <div class="arrow-right">
-                    <a href="{{ route('product', $id + 1 ) }}">></a>
+                    <a href="{{ route('product', $id + 1 ) }}">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
                 </div>
             @endif
         </div>
