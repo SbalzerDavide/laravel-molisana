@@ -14,19 +14,24 @@
     </head>
     <body>
         <div id="app">
-            <!-- header -->
-            @include('partials.header')
+            @include('partials.loader')
 
+            <div class="page" v-if="load">
+                <!-- header -->
+                @include('partials.header')
+    
+    
+                <main>
+                    @yield('content')
+                </main>
+    
+    
+    
+    
+                <!-- footer -->
+                @include('partials.footer')
 
-            <main>
-                @yield('content')
-            </main>
-
-
-
-
-            <!-- footer -->
-            @include('partials.footer')
+            </div>
 
         </div>
 

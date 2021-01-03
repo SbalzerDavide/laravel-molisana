@@ -6182,6 +6182,38 @@ img {
   background-color: #b2e5fc;
 }
 
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 60px;
+  -webkit-animation: load 1s linear infinite;
+          animation: load 1s linear infinite;
+}
+@-webkit-keyframes load {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes load {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .container {
     width: 90vw;
@@ -6392,13 +6424,14 @@ footer .footer .col a {
 .home .preview .first,
 .home .preview .second {
   display: flex;
+  flex-wrap: wrap;
 }
 .home .preview .half {
   flex-basis: 50%;
-  height: 700px;
 }
 .home .preview .big {
   position: relative;
+  height: 700px;
   background-position: center;
   background-size: cover;
 }
@@ -6470,6 +6503,30 @@ footer .footer .col a {
   font-weight: 400;
 }
 
+@media screen and (max-width: 1100px) {
+  .home .ricette .ricetta {
+    flex-basis: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home .ricette {
+    display: none;
+  }
+  .home .preview .half {
+    flex-basis: 100%;
+    height: 550px;
+  }
+  .home .preview .small {
+    height: 2200px;
+  }
+  .home .preview .small .small-element {
+    width: 100%;
+    height: 550px;
+  }
+  .home .preview .overlay {
+    display: none;
+  }
+}
 .ricette .top {
   padding: 30px 0;
   background-color: #001942;
@@ -6553,6 +6610,27 @@ footer .footer .col a {
   transition: all 0.5s;
 }
 
+@media screen and (max-width: 1100px) {
+  .ricette .list .box {
+    flex-basis: 33%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ricette .list .box {
+    flex-basis: 49%;
+  }
+  .ricette .overlay {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .ricette .list {
+    justify-content: center;
+  }
+  .ricette .list .box {
+    flex-basis: 90%;
+  }
+}
 .page-ricetta {
   position: relative;
   font-family: "Teko", sans-serif;

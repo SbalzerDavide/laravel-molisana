@@ -83,3 +83,37 @@
         }
     }
 }
+
+//media query
+@media screen and (max-width: 1100px){
+    .ricette{
+        .list{
+            .box{
+                flex-basis: 33%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .ricette{
+        .list{
+            .box{
+                flex-basis: 49%;
+            }
+        }
+        .overlay{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .ricette{
+        .list{
+            justify-content: center;
+            .box{
+                flex-basis: 90%;
+            }
+        }
+    }
+}

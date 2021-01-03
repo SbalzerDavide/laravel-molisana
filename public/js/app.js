@@ -31600,9 +31600,18 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: "#app",
   data: {
     saluto: 'ciao',
-    showMenu: false
+    showMenu: false,
+    load: false
   },
-  methods: {}
+  methods: {},
+  mounted: function mounted() {
+    var _this = this;
+
+    window.addEventListener('load', function () {
+      console.log('readyyy');
+      _this.load = true;
+    });
+  }
 });
 
 /***/ }),

@@ -7,8 +7,16 @@ const app = new Vue({
     data:{
         saluto: 'ciao',
         showMenu: false,
+        load: false,
     },
     methods:{
 
-    }
+    },
+    mounted() {
+        window.addEventListener('load', () => {
+            console.log('readyyy');
+            this.load = true;
+        })
+    },
+        
 })

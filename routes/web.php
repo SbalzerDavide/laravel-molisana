@@ -29,7 +29,6 @@ Route::get('/grano-italiano', function (Request $request) {
 
     $name = $request->route()->getName();
 
-    // dd($name);
 
     return view('grano-italiano',compact('menu','name'));
 })->name('grano-italiano');
