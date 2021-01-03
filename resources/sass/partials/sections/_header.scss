@@ -21,7 +21,7 @@ header{
                     background-color: $color-hover;
                 }
                 a{
-                    color: #001942;
+                    color: $menu-text;
                     &:hover{
                         color: #444444;;
                         text-decoration: none;

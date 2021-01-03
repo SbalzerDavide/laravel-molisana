@@ -1,0 +1,29 @@
+.tenacita{
+    color: $menu-text;
+    font-family: 'Playfair Display', serif;    
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .center{
+            flex-basis: 36%;
+        }
+        .side{
+            flex-basis: 32%;
+        }
+        h3{
+            text-align: center;
+            &.italic{
+                font-size: 40px;
+                line-height: 3rem;
+            }
+        }
+    }
+    .certificazione{
+        text-align: center;
+        p{
+            text-align: left;
+        }
+
+    }
+}

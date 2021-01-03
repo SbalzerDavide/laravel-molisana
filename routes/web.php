@@ -45,9 +45,11 @@ Route::get('/tenacita', function (Request $request) {
 Route::get('/chi-siamo', function (Request $request) {
     $menu = config('menu-data');
 
+    $who = config('chi-siamo');
+
     $name = $request->route()->getName();
 
-    return view('chi-siamo',compact('menu','name'));
+    return view('chi-siamo',compact('menu','name', 'who'));
 })->name('chi-siamo');
 
 //**********************product**********************

@@ -2,8 +2,14 @@
 
 @section('content')
 
-<div class="container">
-    <h2>sono la pagina chi siamo</h2>
+<div class="who container">
+    @foreach ($who as $element)
+        <div class="box">
+            <img src="{{ $element['img'] }}" alt="">
+            <a href="#"></a>
+        </div>
+    @endforeach
+
 </div>
 
 
