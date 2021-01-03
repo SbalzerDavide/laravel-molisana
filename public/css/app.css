@@ -6273,7 +6273,7 @@ header nav .left {
   text-align: left;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   header nav {
     width: 300px;
   }
@@ -6842,6 +6842,11 @@ h2 {
   text-align: left;
 }
 
+@media screen and (max-width: 768px) {
+  .tenacita .top {
+    display: none;
+  }
+}
 .who {
   display: flex;
   justify-content: space-between;
@@ -6866,4 +6871,15 @@ h2 {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .who .box {
+    flex-basis: 49%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .who .box {
+    flex-basis: 98%;
+  }
 }

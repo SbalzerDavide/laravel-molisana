@@ -24,3 +24,17 @@
         }
     }
 }
+@media screen and (max-width: 768px){
+    .who{
+        .box{
+            flex-basis: 49%;
+        }
+    }
+}
+@media screen and (max-width: 576px){
+    .who{
+        .box{
+            flex-basis: 98%;
+        }
+    }
+}
