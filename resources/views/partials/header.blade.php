@@ -4,15 +4,19 @@
     </div>
     <nav>
         <ul class="list">
-            <li>
-                <a href="{{ route('home') }}">Home</a>
-            </li>
-            <li>
-                <a href="#">Prodotti</a>
-            </li>
-            <li>
-                <a href="{{ route('news') }}">News</a>
-            </li>
+
+            @foreach ($menu as $element)
+                @if ($name == $element['path'])
+                    <li class='active'>
+                        <a href="{{ route($element['path']) }}">{{ $element['name'] }}</a>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{ route($element['path']) }}">{{ $element['name'] }}</a>
+                    </li>
+                @endif    
+            @endforeach
+
         </ul>
         <div class="mobile-nav">
             <div 
@@ -27,15 +31,19 @@
             v-if="showMenu" 
             >
                 <ul class="mobile-list">
-                    <li>
-                        <a href="{{ route('home') }}">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Prodotti</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('news') }}">News</a>
-                    </li>
+
+                    @foreach ($menu as $element)
+                        @if ($name == $element['path'])
+                            <li class='active'>
+                                <a href="{{ route($element['path']) }}">{{ $element['name'] }}</a>
+                            </li>
+                        @else
+                            <li>
+                                <a href="{{ route($element['path']) }}">{{ $element['name'] }}</a>
+                            </li>
+                        @endif    
+                    @endforeach
+
                 </ul>
         
             </div>

@@ -12,8 +12,49 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
 
-Route::get('/', function () {
+Route::get('/', function (Request $request) {
+
+    $menu = config('menu-data');
+
+    $name = $request->route()->getName();
+
+    return view('home',compact('menu','name'));
+})->name('home');
+
+
+Route::get('/grano-italiano', function (Request $request) {
+    $menu = config('menu-data');
+
+    $name = $request->route()->getName();
+
+    // dd($name);
+
+    return view('grano-italiano',compact('menu','name'));
+})->name('grano-italiano');
+
+Route::get('/tenacita', function (Request $request) {
+    $menu = config('menu-data');
+
+    $name = $request->route()->getName();
+
+
+    return view('tenacita',compact('menu','name'));
+})->name('tenacita');
+
+Route::get('/chi-siamo', function (Request $request) {
+    $menu = config('menu-data');
+
+    $name = $request->route()->getName();
+
+    return view('chi-siamo',compact('menu','name'));
+})->name('chi-siamo');
+
+//**********************product**********************
+Route::get('/prodotti', function (Request $request) {
+    $menu = config('menu-data');
+
 
     $data = config('app-data');
 
@@ -35,20 +76,85 @@ Route::get('/', function () {
         }
     };
 
+    $name = $request->route()->getName();
 
-    return view('home', compact('lunghe','corte', 'cortissime'));
-})->name('home');
+    return view('prodotti',compact('menu', 'name', 'lunghe', 'corte', 'cortissime'));
+})->name('prodotti');
 
 Route::get('/product/{id}', function ($id) {
+    $menu = config('menu-data');
+
+    $name = 'prodotti';
+
 
     $data = config('app-data');
     $length = count($data) -1;
 
     $product = $data[$id];
-    return view('product',compact('product','id','length'));
+    return view('product',compact('product','id','length','menu','name'));
 })->name('product');
 
+//**********************food service**********************
+Route::get('/food-service', function (Request $request) {
+    $menu = config('menu-data');
 
-Route::get('/news', function () {
-    return view('news');
+    $name = $request->route()->getName();
+
+    return view('food-service',compact('menu','name'));
+})->name('food-service');
+
+//**********************ricette**********************
+Route::get('/ricette', function (Request $request) {
+    $menu = config('menu-data');
+
+    $ricette = config('ricette');
+
+    foreach ($ricette as $key => $ricetta){
+        $ricetta['id'] = $key;
+        $ricetteCount []= $ricetta;
+    };
+
+    $name = $request->route()->getName();
+
+    return view('ricette',compact('menu','name','ricetteCount'));
+})->name('ricette');
+
+Route::get('/ricetta/{id}', function ($id) {
+    $menu = config('menu-data');
+
+    $name = 'ricette';
+
+    $ricette = config('ricette');
+
+
+    $length = count($ricette) -1;
+
+    $ricetta = $ricette[$id];
+    return view('ricetta',compact('id','length','menu','name', 'ricetta'));
+})->name('ricetta');
+
+//**********************impegno**********************
+Route::get('/impegno', function (Request $request) {
+    $menu = config('menu-data');
+
+    $name = $request->route()->getName();
+
+    return view('impegno',compact('menu','name'));
+})->name('impegno');
+
+Route::get('/limited-edition', function (Request $request) {
+    $menu = config('menu-data');
+
+    $name = $request->route()->getName();
+
+    return view('limited-edition',compact('menu','name'));
+})->name('limited-edition');
+
+Route::get('/news', function (Request $request) {
+    $menu = config('menu-data');
+
+    $name = $request->route()->getName();
+
+    return view('news',compact('menu','name'));
 })->name('news');
+

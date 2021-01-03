@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <h2>sono la pagina news</h2>
+    <h2>sono la pagina limited edition</h2>
 </div>
 
 

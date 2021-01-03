@@ -1,7 +1,9 @@
-//***************fontawesome*************
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-//solid
+//import
+//fontawesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';  
 @import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
 
 //******************partials***************
 // import 
@@ -10,7 +12,22 @@
 @import 'partials/utilities';
 
 //sections
-@import 'partials/header';
-@import 'partials/main';
-@import 'partials/product';
-@import 'partials/footer';
+@import 'partials/sections/header';
+@import 'partials/sections/main';
+@import 'partials/sections/footer';
+
+//main
+@import 'partials/sections/home';
+@import 'partials/sections/ricette';
+@import 'partials/sections/ricetta';
+@import 'partials/sections/products';
+@import 'partials/sections/product';
+
+
+
+
+
+
+
+
+

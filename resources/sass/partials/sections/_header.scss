@@ -1,34 +1,36 @@
 header{
+    font-family: 'Teko', sans-serif;
     padding-top: 20px;
     .logo{
         width: 200px;
         margin: 0 auto;
     }
     nav{
-        width: 400px;
+        // width: 400px;
         margin: 0 auto;
         .list{
             margin-left: 0;
             display: flex;
             align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             li{
                 text-align: center;
-                flex-basis: calc(100%/3);
-                line-height: 4rem;
+                padding: 10px 15px;
                 &:hover{
                     background-color: $color-hover;
                 }
                 a{
-                    display: inline-block;
-                    height: 100%;
-                    width: 100%;
+                    color: #001942;
                     &:hover{
+                        color: #444444;;
                         text-decoration: none;
                     }
                 }
             }
         }
         .mobile-nav{
+            display: none;
             position: relative;
             text-align: center;
             cursor: pointer;
@@ -50,7 +52,9 @@ header{
             .mobile-nav{
                 display: inline-block;
                 width: 100%;
-                line-height: 4rem;
+            }
+            .mobile-list li{
+                padding: 10px 0;
             }
         }
 

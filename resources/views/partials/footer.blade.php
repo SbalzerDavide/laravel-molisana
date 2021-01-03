@@ -94,8 +94,8 @@
             </div>
     
         </div>
-        <div class="image">
-            <img src="{{ asset('image/footer-montagne-bottom.jpg') }}" alt="">
-        </div>
+    </div>
+    <div class="image">
+        <img src="{{ asset('image/footer-montagne-bottom.jpg') }}" alt="">
     </div>
 </footer>

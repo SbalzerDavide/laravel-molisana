@@ -8,27 +8,29 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
-
-        <!-- styles -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&family=Playfair+Display:wght@400;800;900&family=Poppins:wght@900&family=Teko:wght@300&display=swap" rel="stylesheet"> 
+        <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-        
-        
-    </head> 
+    </head>
     <body>
         <div id="app">
+            <!-- header -->
             @include('partials.header')
-            
+
+
             <main>
                 @yield('content')
             </main>
-            
+
+
+
+
+            <!-- footer -->
             @include('partials.footer')
 
         </div>
 
         <!-- script -->
-        <script src="{{ asset('js/app.js')}}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

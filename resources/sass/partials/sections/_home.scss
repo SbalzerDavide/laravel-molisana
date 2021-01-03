@@ -1,0 +1,163 @@
+.home{
+    .ricette{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        .ricetta{
+            display: flex;
+            flex-basis: 50%;
+            position: relative;
+            overflow-y: hidden;
+            .image,
+            .description{
+                flex-basis: 50%;
+            }
+        }
+        .scopri{
+            position: absolute;
+            display: inline-block;
+            padding: 10px 10px 50px;
+            width: 80%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 300;
+            bottom: 0;
+            left: 50%;
+            box-shadow: 3px 5px 8px 0 #222 ;
+            transform: translateX(-50%) rotate(-3deg);
+            animation: scopri 4s infinite;
+            &.scopri-primary{
+                background-color: $white;
+            }
+            &.scopri-secondary{
+                a{
+                    color: $white;
+                }
+                background-color: $black;
+                background-image: linear-gradient(to right, rgba($red,.7), $red);
+            }
+            a:hover{
+                text-decoration: none;
+            }
+            @keyframes scopri {
+                0%   {bottom: -35px}
+                50%  {bottom: -20px}
+                100% {bottom: -35px}
+            }
+        }
+        .left{
+            background-color: $red;
+        }
+        .right{
+            background-color: $yellow;
+        }
+        .description{
+            padding: 30px 20px;
+        }
+        h2{
+            font-family: 'Poppins', sans-serif;
+            color: rgba($white, .2);
+            font-size: 60px;
+            font-weight: 900;
+        }
+        h3{
+            font-family: 'Playfair Display', serif;
+            color: $white;
+            font-weight: 300;
+            line-height: 1.6rem;
+            margin-top: 30px;
+        }
+        img{
+            display: block;
+        }
+        button{
+            margin-top: 10px;
+        }
+    }
+    .logo-chef{
+        position: absolute;
+        height: 150px;
+    }
+    .preview{
+        .first,
+        .second{
+            display: flex;
+        }
+        .half{
+            flex-basis: 50%;
+            height: 700px;
+        }
+        .big{
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            &:hover .overlay{
+                opacity: 1;
+            }
+            &:hover .text{
+                top: 0;
+            }
+        }
+        .small{
+            display: flex;
+            flex-wrap: wrap;
+            .small-element{
+                position: relative;
+                height: 50%;
+                width: 50%;
+                background-position: center;
+                background-size: cover;
+                &:hover .overlay{
+                    opacity: 1;
+                }
+                &:hover .text{
+                    top: 10px;
+                }
+            }
+        }
+        .overlay{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            position: absolute;
+            background-color: rgba($overlay, .85);
+            padding: 15% 8% 5%;
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            color: $white;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            transition: all .3s;
+            .plus{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                margin: 0 auto;
+                border: 3px solid $white;
+                border-radius: 50%;
+            }
+            .text{
+                position: relative;
+                top: 40px;
+                margin-top: 20%;
+                line-height: 2rem;
+                transition: all .5s;
+            }
+        }
+    }
+}
+.bottom{
+    text-align: center;
+    color: $white;
+    padding: 20px;
+    background-color: $overlay;
+    h3{
+        font-size: 23px;
+        font-weight: 400;
+    }
+}
+

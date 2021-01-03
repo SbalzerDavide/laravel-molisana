@@ -1,0 +1,95 @@
+.page-ricetta{
+    position: relative;
+    font-family: 'Teko', sans-serif;
+    color: $primary-text;
+
+    h3{
+        text-transform: uppercase;
+        font-size: 35px;
+    }
+    .image{
+        width: 500px;
+        text-align: center;
+        margin: 10px auto;
+    }
+    .info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid $primary-text;
+        text-align: center;
+        font-size: 40px;
+        span{
+            color: $secondary-text;
+        }
+    }
+    .dosi,
+    .diff{
+        flex-basis: 25%;
+    }
+    .tempo{
+        flex-basis: 50%;
+        border-right: 1px solid $primary-text;
+        border-left: 1px solid $primary-text;
+        padding: 10px 0;
+        
+    }
+    .description{
+        font-size: 30px;
+    }
+    .arrow-left,
+    .arrow-right{
+        position: absolute;
+        top: 50%;
+        padding: 20px;
+        border-radius: 5px;
+        &:hover{
+            background-color: $color-hover;
+        }
+        a{  
+            font-size: 50px;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+    .arrow-left{
+        left: 0;
+    }
+    .arrow-right{
+        right: 0;
+    }
+}
+
+//media query
+@media screen and (max-width:1100px){
+    .page-ricetta{
+        .info{
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .page-ricetta{
+        .image{
+            width: 80%;
+        }
+        .info{
+            justify-content: center;
+            border-bottom: none;
+            &>*{
+                flex-basis: 80%; 
+            }
+            .tempo{
+                border-right: none;
+                border-left: none;
+                border-top: 1px solid $primary-text;
+                border-bottom: 1px solid $primary-text;
+            }
+        }
+    }
+}
+
+
