@@ -1,0 +1,24 @@
+.news{
+    .top{
+        padding: 30px 0;
+        background-color: $overlay;
+        h3{
+            color: $white;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .news{
+        .top{
+            padding: 25px 0;
+            h3{
+                font-size: 20px;
+                line-height: 1.9rem;
+            }
+        }
+    }
+}

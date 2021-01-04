@@ -6161,7 +6161,6 @@ a.overlay-ancor {
 button.btn {
   font-weight: 300;
   font-size: 13px;
-  border-radius: 15px;
   border: transparent;
   padding: 5px 15px;
   cursor: pointer;
@@ -6171,10 +6170,26 @@ button.btn a:hover {
   text-decoration: none;
 }
 button.btn.btn-primary {
+  border-radius: 15px;
   background-color: #fff;
 }
 button.btn.btn-primary:hover {
   background-color: #b4b59d;
+}
+button.btn.btn-secondary {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  font-weight: 800;
+}
+button.btn.btn-secondary:hover {
+  background-color: #fff;
+}
+button.btn.btn-secondary:hover a {
+  color: #000;
+}
+button.btn.btn-secondary a {
+  color: #fff;
 }
 
 img {
@@ -6288,6 +6303,26 @@ header nav .left {
     padding: 10px 0;
   }
 }
+.news .top {
+  padding: 30px 0;
+  background-color: #001942;
+}
+.news .top h3 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 576px) {
+  .news .top {
+    padding: 25px 0;
+  }
+  .news .top h3 {
+    font-size: 20px;
+    line-height: 1.9rem;
+  }
+}
 footer {
   margin-top: 50px;
 }
@@ -6326,6 +6361,101 @@ footer .footer .col a {
   footer .footer .col {
     flex-basis: 100%;
     font-size: 24px;
+  }
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .box {
+  position: relative;
+  flex-basis: 33%;
+  overflow: hidden;
+  margin: calc(1%/6);
+}
+.gallery .box img {
+  transition: all 1.3s linear;
+  display: block;
+}
+.gallery .box:hover img {
+  transform: scale(1.1);
+}
+.gallery .box a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery .box {
+    flex-basis: 49%;
+    margin: calc(1%/4);
+  }
+}
+@media screen and (max-width: 576px) {
+  .gallery {
+    justify-content: space-between;
+  }
+  .gallery .box {
+    flex-basis: 98%;
+  }
+}
+.blog {
+  display: flex;
+  flex-wrap: wrap;
+}
+.blog .box {
+  position: relative;
+  flex-basis: calc(100%/3);
+  height: 500px;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+}
+.blog .box:hover .layover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.blog .box .layover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+.blog .box .text {
+  display: flex;
+  position: absolute;
+  padding: 50px 20px;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.blog .box .text .date {
+  font-style: italic;
+}
+.blog .box .text .title {
+  font-family: "Playfair Display", serif;
+}
+.blog .box .text .btn {
+  width: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  .blog .box {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .blog .box {
+    flex-basis: 100%;
+    height: 100vh;
   }
 }
 .home .ricette {
@@ -6845,44 +6975,5 @@ h2 {
 @media screen and (max-width: 768px) {
   .tenacita .top {
     display: none;
-  }
-}
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-}
-.gallery .box {
-  position: relative;
-  flex-basis: 33%;
-  overflow: hidden;
-  margin: calc(1%/6);
-}
-.gallery .box img {
-  transition: all 1.3s linear;
-  display: block;
-}
-.gallery .box:hover img {
-  transform: scale(1.1);
-}
-.gallery .box a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .gallery .box {
-    flex-basis: 49%;
-    margin: calc(1%/4);
-  }
-}
-@media screen and (max-width: 576px) {
-  .gallery {
-    justify-content: space-between;
-  }
-  .gallery .box {
-    flex-basis: 98%;
   }
 }

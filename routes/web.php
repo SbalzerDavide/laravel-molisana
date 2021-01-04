@@ -147,6 +147,7 @@ Route::get('/impegno', function (Request $request) {
     return view('impegno',compact('menu','name','impegno'));
 })->name('impegno');
 
+//**********************limited edition**********************
 Route::get('/limited-edition', function (Request $request) {
     $menu = config('menu-data');
 
@@ -157,11 +158,14 @@ Route::get('/limited-edition', function (Request $request) {
     return view('limited-edition',compact('menu','name','limited'));
 })->name('limited-edition');
 
+//**********************news**********************
 Route::get('/news', function (Request $request) {
     $menu = config('menu-data');
 
+    $news = config('news');
+
     $name = $request->route()->getName();
 
-    return view('news',compact('menu','name'));
+    return view('news',compact('menu','name','news'));
 })->name('news');
 
