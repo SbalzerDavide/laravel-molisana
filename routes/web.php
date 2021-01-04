@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 use Illuminate\Http\Request;
 
+//**********************home**********************
 Route::get('/', function (Request $request) {
 
     $menu = config('menu-data');
@@ -23,7 +24,7 @@ Route::get('/', function (Request $request) {
     return view('home',compact('menu','name'));
 })->name('home');
 
-
+//**********************grano italiano**********************
 Route::get('/grano-italiano', function (Request $request) {
     $menu = config('menu-data');
 
@@ -33,6 +34,7 @@ Route::get('/grano-italiano', function (Request $request) {
     return view('grano-italiano',compact('menu','name'));
 })->name('grano-italiano');
 
+//**********************tenacita**********************
 Route::get('/tenacita', function (Request $request) {
     $menu = config('menu-data');
 
@@ -42,6 +44,7 @@ Route::get('/tenacita', function (Request $request) {
     return view('tenacita',compact('menu','name'));
 })->name('tenacita');
 
+//**********************chi siamo**********************
 Route::get('/chi-siamo', function (Request $request) {
     $menu = config('menu-data');
 
