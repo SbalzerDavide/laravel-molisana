@@ -1,4 +1,4 @@
-.who{
+.gallery{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -25,14 +25,14 @@
     }
 }
 @media screen and (max-width: 768px){
-    .who{
+    .gallery{
         .box{
             flex-basis: 49%;
         }
     }
 }
 @media screen and (max-width: 576px){
-    .who{
+    .gallery{
         .box{
             flex-basis: 98%;
         }

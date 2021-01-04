@@ -3,12 +3,8 @@
 @section('content')
 
 <div class="who container">
-    @foreach ($who as $element)
-        <div class="box">
-            <img src="{{ $element['img'] }}" alt="">
-            <a href="#"></a>
-        </div>
-    @endforeach
+    
+    @include('partials.gallery',['list' => $who])
 
 </div>
 

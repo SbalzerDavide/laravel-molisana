@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="container">
-    <h2>sono la pagina food service</h2>
+<div class="food-service container">
+    @include('partials.gallery',['list' => $service])
 </div>
 
 

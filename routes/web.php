@@ -99,9 +99,11 @@ Route::get('/product/{id}', function ($id) {
 Route::get('/food-service', function (Request $request) {
     $menu = config('menu-data');
 
+    $service = config('food-service');
+
     $name = $request->route()->getName();
 
-    return view('food-service',compact('menu','name'));
+    return view('food-service',compact('menu','name','service'));
 })->name('food-service');
 
 //**********************ricette**********************
