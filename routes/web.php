@@ -140,17 +140,21 @@ Route::get('/ricetta/{id}', function ($id) {
 Route::get('/impegno', function (Request $request) {
     $menu = config('menu-data');
 
+    $impegno = config('impegno');
+
     $name = $request->route()->getName();
 
-    return view('impegno',compact('menu','name'));
+    return view('impegno',compact('menu','name','impegno'));
 })->name('impegno');
 
 Route::get('/limited-edition', function (Request $request) {
     $menu = config('menu-data');
 
+    $limited = config('limited');
+
     $name = $request->route()->getName();
 
-    return view('limited-edition',compact('menu','name'));
+    return view('limited-edition',compact('menu','name','limited'));
 })->name('limited-edition');
 
 Route::get('/news', function (Request $request) {

@@ -1,19 +1,17 @@
 .gallery{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     .box{
         position: relative;
         flex-basis: 33%;
         overflow: hidden;
-        margin-bottom: 5px;
+        margin: calc(1%/6);
         img{
-            transition: all 1s linear;
+            transition: all 1.3s linear;
             display: block;
-
         }
         &:hover img{
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
         a{
             position: absolute;
@@ -28,11 +26,13 @@
     .gallery{
         .box{
             flex-basis: 49%;
+            margin: calc(1%/4);
         }
     }
 }
 @media screen and (max-width: 576px){
     .gallery{
+            justify-content: space-between;
         .box{
             flex-basis: 98%;
         }

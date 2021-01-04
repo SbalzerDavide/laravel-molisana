@@ -3,7 +3,9 @@
 @section('content')
 
 <div class="container">
-    <h2>sono la pagina limited edition</h2>
+
+    @include('partials.gallery',['list' => $limited])
+
 </div>
 
 
