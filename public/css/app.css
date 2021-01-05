@@ -6117,6 +6117,10 @@ readers do not read off random characters that represent icons */
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 24px;
   font-family: "Roboto", sans-serif;
@@ -6405,6 +6409,9 @@ footer .footer .col a {
 .blog {
   display: flex;
   flex-wrap: wrap;
+}
+.blog h1 {
+  padding: 20px 0;
 }
 .blog .box {
   position: relative;
@@ -6975,5 +6982,119 @@ h2 {
 @media screen and (max-width: 768px) {
   .tenacita .top {
     display: none;
+  }
+}
+.grano .hero {
+  position: relative;
+  background-image: url("../image/adv-grano-slide.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+.grano .hero h2 {
+  padding-top: 70vh;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 800;
+  font-size: 45px;
+  color: #fff;
+}
+.grano .hero .go-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 30px;
+  border-radius: 15px;
+  border: 3px solid #fff;
+  cursor: pointer;
+}
+.grano .hero .go-down .point {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 5px auto;
+  -webkit-animation: down 2s infinite;
+          animation: down 2s infinite;
+}
+@-webkit-keyframes down {
+  0% {
+    top: 0;
+  }
+  40% {
+    top: 20px;
+    opacity: 1;
+  }
+  70% {
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+@keyframes down {
+  0% {
+    top: 0;
+  }
+  40% {
+    top: 20px;
+    opacity: 1;
+  }
+  70% {
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+.grano .one {
+  background-color: #f5d780;
+  color: #67543e;
+  text-align: center;
+}
+.grano .one h3 {
+  font-size: 40px;
+  font-style: italic;
+}
+.grano .one h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #67543e;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.grano .one h4 {
+  color: #95864a;
+  line-height: 3rem;
+  border-bottom: 1px solid #67543e;
+  border-top: 1px solid #67543e;
+}
+.grano .one .par {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+.grano .one .par > p {
+  flex-basis: 50%;
+  text-align: left;
+  line-height: 2rem;
+}
+.grano .one .par > p span {
+  font-weight: 800;
+}
+
+@media screen and (max-width: 576px) {
+  .grano .one .par {
+    justify-content: center;
+  }
+  .grano .one .par > p {
+    flex-basis: 90%;
   }
 }

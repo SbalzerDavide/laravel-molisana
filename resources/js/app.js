@@ -9,14 +9,17 @@ const app = new Vue({
         showMenu: false,
         load: false,
     },
-    methods:{
+    created(){
 
+    },
+    methods:{
+        goDown(){
+            document.documentElement.scrollTop = this.$refs.hero.scrollHeight + this.$refs.header.scrollHeight;
+        },
     },
     mounted() {
         window.addEventListener('load', () => {
-            console.log('readyyy');
             this.load = true;
         })
     },
-        
 })

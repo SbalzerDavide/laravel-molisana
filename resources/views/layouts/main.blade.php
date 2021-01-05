@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
-        <div id="app">
+        <div id="app" >
             @include('partials.loader')
 
             <div class="page" v-if="load">

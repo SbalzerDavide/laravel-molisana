@@ -1,6 +1,9 @@
 .blog{
     display: flex;
     flex-wrap: wrap;
+    h1{
+        padding: 20px 0;
+    }
     .box{
         position: relative;
         flex-basis: calc(100%/3);

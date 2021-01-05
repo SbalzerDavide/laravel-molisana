@@ -31603,12 +31603,16 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     showMenu: false,
     load: false
   },
-  methods: {},
+  created: function created() {},
+  methods: {
+    goDown: function goDown() {
+      document.documentElement.scrollTop = this.$refs.hero.scrollHeight + this.$refs.header.scrollHeight;
+    }
+  },
   mounted: function mounted() {
     var _this = this;
 
     window.addEventListener('load', function () {
-      console.log('readyyy');
       _this.load = true;
     });
   }
